@@ -1,0 +1,741 @@
+@import url("https://fonts.googleapis.com/css2?family=Coiny&family=Mitr:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  font-family: "Mitr", sans-serif;
+  color: #0d294f;
+  background: #102e55;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Login */
+
+.login-screen {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(58px, 10vh, 115px);
+  padding: 48px 20px;
+  background: #102e55;
+}
+
+.login-title {
+  margin: 0;
+  color: white;
+  font-family: "Coiny", cursive;
+  font-size: clamp(48px, 7vw, 88px);
+  font-weight: 400;
+  line-height: 1.02;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+.login-title span {
+  display: block;
+}
+
+.login-card {
+  width: min(440px, 100%);
+  padding: 34px 34px 30px;
+  border: 8px solid #69cee1;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0 18px 26px rgb(4 21 43 / 36%);
+}
+
+.login-card h2 {
+  margin: 0 0 28px;
+  border: 1px solid #101010;
+  box-shadow: 0 4px 5px rgb(0 0 0 / 25%);
+  font-size: 32px;
+  line-height: 42px;
+  text-align: center;
+}
+
+.login-card label {
+  display: block;
+  margin: 0 0 7px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 54px;
+  margin-bottom: 20px;
+  padding: 0 16px;
+  border: 1px solid #9ed7f4;
+  border-radius: 14px;
+  background: #f7f9fb;
+  color: #050505;
+}
+
+.input-wrap input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #102e55;
+}
+
+.login-button {
+  width: 100%;
+  height: 58px;
+  margin-top: 14px;
+  border: 0;
+  border-radius: 14px;
+  background: #69cee1;
+  color: #071d34;
+  font-weight: 600;
+}
+
+/* Dashboard */
+
+.dashboard {
+  min-height: 100dvh;
+  padding: 26px clamp(18px, 2.6vw, 48px) 70px;
+  background: #102e55;
+  color: white;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 0 0 14px;
+  scrollbar-width: none;
+}
+
+.top-nav button {
+  flex: 0 0 auto;
+  min-height: 49px;
+  padding: 7px 22px;
+  border: 2px solid #d7ecff;
+  border-radius: 28px;
+  background: transparent;
+  color: #e8f3ff;
+  font-size: clamp(15px, 1.4vw, 19px);
+  font-weight: 600;
+}
+
+.top-nav button.active {
+  background: #d8eaff;
+  color: #102e55;
+  box-shadow: inset 0 0 0 2px white;
+}
+
+.dashboard-title {
+  margin: 14px 0 34px;
+  color: #68d5e9;
+  font-family: "Coiny", "Mitr", sans-serif;
+  font-size: clamp(39px, 5vw, 65px);
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  text-shadow: 0 6px 0 rgb(4 24 48 / 24%);
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.overview-grid {
+  gap: 24px;
+}
+
+/* Battery */
+
+.battery-heading {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  margin: 0 14px 16px;
+}
+
+.battery-heading h2,
+.battery-heading p,
+.panel-heading h2,
+.panel-heading p {
+  margin: 0;
+}
+
+.battery-heading h2,
+.panel-heading h2 {
+  font-size: clamp(23px, 2.2vw, 31px);
+  line-height: 1.25;
+}
+
+.battery-heading p,
+.panel-heading p {
+  color: #d7e7fa;
+  font-size: clamp(13px, 1.3vw, 17px);
+  font-weight: 300;
+}
+
+.battery-heading > strong {
+  font-size: 27px;
+}
+
+.metric-shell,
+.chart-card,
+.camera-card,
+.chat-card {
+  border: 9px solid white;
+  border-radius: 27px;
+  background: #badbff;
+  color: #102e55;
+}
+
+.metric-shell {
+  padding: 38px 18px 18px;
+}
+
+.metric-shell::before {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: -19px 0 20px;
+  background: #8db8e2;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 14px;
+}
+
+.metric-card {
+  min-height: 122px;
+  padding: 17px 18px;
+  border-radius: 20px;
+  background: #a8caee;
+}
+
+.metric-card p {
+  margin: 0 0 4px;
+  font-weight: 500;
+}
+
+.metric-card strong {
+  display: block;
+  font-size: 31px;
+  line-height: 1.25;
+}
+
+.metric-card small {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+/* Panels */
+
+.chart-card,
+.camera-card,
+.chat-card {
+  padding: 18px;
+}
+
+.panel-heading {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 17px;
+  min-height: 78px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #84afd8;
+}
+
+.panel-heading p {
+  color: #2c4e72;
+}
+
+.panel-icon {
+  display: grid;
+  width: 62px;
+  height: 62px;
+  place-items: center;
+  border-radius: 18px;
+  background: #102e55;
+  color: white;
+}
+
+.round-badge {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border-radius: 50%;
+  background: #102e55;
+  color: white;
+  font-size: 28px;
+}
+
+.chart-content,
+.camera-content,
+.chat-content {
+  margin-top: 20px;
+  padding: 17px;
+  border-radius: 20px;
+  background: #a8caee;
+}
+
+/* Charts */
+
+.chart-caption,
+.camera-meta,
+.chat-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.chart-caption span,
+.camera-meta span,
+.chat-label span {
+  color: #3d5c7b;
+  font-size: 13px;
+}
+
+.chart-plot {
+  position: relative;
+  height: 240px;
+  padding: 0 10px 0 38px;
+  border-radius: 17px;
+  background: #102e55;
+  overflow: hidden;
+}
+
+.chart-plot svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.chart-plot line {
+  stroke: #54708f;
+  stroke-width: 1;
+}
+
+.chart-plot polyline {
+  fill: none;
+  stroke-width: 3;
+}
+
+.line-12 {
+  stroke: #64d7e9;
+}
+
+.line-24 {
+  stroke: #5a9aaa;
+}
+
+.dot-12 {
+  fill: #64d7e9;
+}
+
+.dot-24 {
+  fill: #5a9aaa;
+}
+
+.y {
+  position: absolute;
+  left: 9px;
+  color: #cee2f7;
+  font-size: 12px;
+}
+
+.y1 {
+  top: 13%;
+}
+
+.y2 {
+  top: 30%;
+}
+
+.y3 {
+  top: 47%;
+}
+
+.y4 {
+  top: 64%;
+}
+
+.y5 {
+  top: 81%;
+}
+
+.x-axis {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 6px 0 36px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.legend {
+  display: flex;
+  gap: 20px;
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.key {
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+}
+
+.key-12 {
+  background: #64d7e9;
+}
+
+.key-24 {
+  background: #5a9aaa;
+}
+
+/* Connection */
+
+.connection-bar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+  align-items: center;
+  margin: -5px 12px 26px;
+  padding: 2px 12px;
+  border-radius: 20px;
+  background: white;
+  color: #102e55;
+  font-size: clamp(13px, 1.4vw, 20px);
+}
+
+.connection-bar b {
+  margin: -3px -12px -3px 0;
+  padding: 5px 15px;
+  border-radius: 22px;
+  background: #102e55;
+  color: white;
+}
+
+.status-pill {
+  padding: 9px 18px;
+  border-radius: 24px;
+  background: #102e55;
+  color: white;
+  white-space: nowrap;
+}
+
+/* Camera */
+
+.camera-card > h3 {
+  margin: 14px 0 0;
+}
+
+.camera-view {
+  position: relative;
+  display: grid;
+  min-height: 240px;
+  place-items: center;
+  padding: 30px;
+  border-radius: 15px;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+.camera-view > span {
+  position: absolute;
+  top: 13px;
+  left: 16px;
+  padding: 7px 12px;
+  border-radius: 18px;
+  background: #102e55;
+  font-size: 12px;
+}
+
+.camera-view p {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.camera-view small {
+  display: block;
+  margin-top: 5px;
+}
+
+.camera-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 13px;
+}
+
+.camera-actions button,
+.quick-questions button,
+.chat-form button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 0;
+  border-radius: 13px;
+  background: #102e55;
+  color: white;
+  font-weight: 500;
+}
+
+.camera-actions button {
+  padding: 10px 18px;
+}
+
+/* Chat */
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-height: 260px;
+}
+
+.message-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 9px;
+}
+
+.message-row.user {
+  flex-direction: row-reverse;
+}
+
+.message-row p,
+.sender {
+  margin: 0;
+  padding: 8px 11px;
+  border-radius: 18px;
+  background: #102e55;
+  color: white;
+  font-size: 12px;
+}
+
+.sender {
+  display: grid;
+  width: 41px;
+  height: 41px;
+  flex: 0 0 auto;
+  place-items: center;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 10px;
+}
+
+.quick-questions {
+  display: flex;
+  gap: 8px;
+  margin-top: 11px;
+  overflow-x: auto;
+}
+
+.quick-questions button {
+  flex: 0 0 auto;
+  padding: 7px 11px;
+  font-size: 11px;
+}
+
+.chat-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.chat-form input {
+  min-width: 0;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 12px;
+  outline: 0;
+  background: #102e55;
+  color: white;
+}
+
+.chat-form input::placeholder {
+  color: #c9d9e8;
+}
+
+.chat-form button {
+  padding: 9px 14px;
+}
+
+/* Toast */
+
+.toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 10;
+  padding: 12px 18px;
+  border: 2px solid white;
+  border-radius: 14px;
+  background: #69cee1;
+  color: #102e55;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 25%);
+  font-weight: 600;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .dashboard {
+    padding-inline: 14px;
+  }
+
+  .top-nav {
+    justify-content: flex-start;
+  }
+
+  .dashboard-title {
+    margin-top: 20px;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .connection-bar {
+    grid-template-columns: 1fr;
+    gap: 3px;
+    border-radius: 15px;
+  }
+
+  .connection-bar b {
+    margin: 5px -12px -3px;
+    border-radius: 0 0 14px 14px;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 560px) {
+  .login-screen {
+    justify-content: flex-start;
+    gap: 55px;
+    padding-top: 15vh;
+  }
+
+  .login-title {
+    font-size: 40px;
+  }
+
+  .login-card {
+    padding: 25px 20px 22px;
+    border-width: 6px;
+  }
+
+  .dashboard {
+    padding-top: 15px;
+  }
+
+  .top-nav button {
+    min-height: 42px;
+    padding: 6px 15px;
+    font-size: 13px;
+  }
+
+  .dashboard-title {
+    margin-bottom: 25px;
+    font-size: 35px;
+  }
+
+  .battery-heading {
+    grid-template-columns: auto 1fr;
+    margin-inline: 4px;
+  }
+
+  .battery-heading > strong {
+    grid-column: 2;
+    font-size: 22px;
+  }
+
+  .metric-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-heading {
+    grid-template-columns: auto 1fr;
+  }
+
+  .panel-heading > .round-badge,
+  .panel-heading > .status-pill {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .panel-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .chart-card,
+  .camera-card,
+  .chat-card {
+    padding: 11px;
+    border-width: 6px;
+  }
+
+  .chart-content,
+  .camera-content,
+  .chat-content {
+    padding: 12px;
+  }
+
+  .chart-plot {
+    height: 200px;
+  }
+
+  .x-axis span:nth-child(even) {
+    display: none;
+  }
+
+  .message-row p {
+    font-size: 11px;
+  }
+
+  .chat-form button span {
+    display: none;
+  }
+}
