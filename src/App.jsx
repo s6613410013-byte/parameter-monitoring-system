@@ -10,7 +10,7 @@ import {
 
 const NAV_ITEMS = [
   { id: "overview", label: "ภาพรวม" },
-  { id: "energy", label: "พลังงานสะสมและกราฟ" },
+  { id: "energy", label: "กราฟ" },
   { id: "camera", label: "กล้องและระบบถามตอบ" },
 ];
 
