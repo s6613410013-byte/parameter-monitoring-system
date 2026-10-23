@@ -185,7 +185,7 @@ function Chart({ title, badge }) {
       <div className="chart-content">
         <div className="chart-caption">
           <strong>
-            {badge === "I" ? "กระแสไฟฟ้า" : "แรงดันไฟฟ้า"} (V)
+            {badge === "I" ? "กระแสไฟฟ้า (A)" : "แรงดันไฟฟ้า (V)"} 
             เมื่อเวลาผ่านไป
           </strong>
           <span>ตัวอย่างข้อมูล</span>
